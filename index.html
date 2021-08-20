@@ -29,7 +29,7 @@
                 <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-card fa-lg"></span> Contact</a>    </li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+                <a id='loginButton'>
                     <span class="fa fa-sign-in"></span>Login
                 </a>
             </span>
@@ -78,7 +78,7 @@
                     <h4 class="modal-title">Reserve a Table</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="model-body">
+                <div class="modal-body">
                     <form>
                         <div class="container">
                             <div class="form-group row">
@@ -158,7 +158,7 @@
                 </div>
                 <div class="col-12 col-sm align-self-center">
                     <a class="btn  btn-block btn-sm btn-warning"
-                        data-toggle="modal" data-target="#reservationModal"
+                        id="reserveButton"
                     href="#reserveTable">Reserve Table</a>
                 </div>
                 
@@ -273,61 +273,6 @@
                 
             </div>
         </div>
-        <!-- <div class="row row-content justify-content-sm-center" id="reserveTable">
-            <div class=" col-12 col-sm-8 align-self-center">
-                <div class="card">
-                    <div class="card-header bg-warning text-white">Reserve a Table</div>
-                    <div class="card-body">
-                        <form >
-                            <div class="form-group row">
-                                <label for="numGests" class="col-12 col-md-2 col-form-label">Number of Gestes</label>
-                                <div class="col-12 col-md-8">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="radio1" name="numGests" value="1">
-                                        <label class="form-check-label" for="radio1">1</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="radio2"name="numGests" value="2">
-                                        <label class="form-check-label" for="radio2">2</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="radio3"name="numGests" value="3" >
-                                        <label class="form-check-label" for="radio3">3</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="radio4"name="numGests" value="4">
-                                        <label class="form-check-label" for="radio4">4</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="radio5"name="numGests" value="5">
-                                        <label class="form-check-label" for="radio5">5</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" id="radio6"name="numGests" value="6" >
-                                        <label class="form-check-label" for="radio6">6</label>
-                                      </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="telnum" class="col-12 col-md-2 col-form-label">Date and Time</label>
-                                <div class="col-12 col-md-4">
-                                    <input type="date" class="form-control" id="date" name="date" placeholder="Date"/>
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <input type="time" class="form-control" id="time" name="time" placeholder="Time"/>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </div>
 
     <footer class="footer">
@@ -390,9 +335,16 @@
                     
                 }
             })
+            $('#loginButton').click(function(){
+                $("#loginModal").modal("show")
+            })
+            $('#reserveButton').click(function(){
+                $("#reservationModal").modal("show")
+            })
+            
            
         })
     </script>
 </body>
 
-</html>s
+</html>
